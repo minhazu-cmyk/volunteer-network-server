@@ -7,7 +7,7 @@ const MongoClient = require('mongodb').MongoClient;
 
 
 const port = 5000
-const pass = "SocialActivity12"
+
 
 const app = express()
 app.use(cors());
@@ -39,6 +39,6 @@ app.get('/register', (req,res)=>{
 app.get('/', (req, res) => {
   res.send('Hello World!')
 })
+app.listen(process.env.PORT||port)
 
-app.listen(port)
 // half done
